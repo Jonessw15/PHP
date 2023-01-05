@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+<head>  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +14,19 @@
         $email = $_POST['email'];
         $senha = $_POST['senha'];
 
-        $sql = "INSERT INTO `crud`(`nome`, `email`, `senha`) VALUES ('$nome', '$email', '$senha')";
+        $sql = "INSERT INTO `crud`(`nome`, `email`, `senha`) VALUES ('$nome','$email','$senha')";
 
-        if (mysqli_query($conn, $sql)) {
+        if ($conn->query($sql) === TRUE) {
             echo `$nome cadastrado com sucesso!`;
         } else 
             echo `$nome não cadastrado!`;
     ?> <a href="index.php"><input type="button" value="Voltar"></a>
 </body>
 </html>
+
+
+
+
+if ($resultado->query($sql) === TRUE) {
+    
+}

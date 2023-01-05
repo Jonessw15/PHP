@@ -2,21 +2,62 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Cadastro</title>
 </head>
-<body style="background: gray">
-    <section>
-        <div class="container">
+<body style="background: black" class="body">
+<!--         <div class="container">
             <div class="box">
             <div id="tit">
-            <h1>Cadastro</h1>
-            </div>
+ -->           
+ 
+                <section>
+    
+                <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
+                <div class="login">
+                <h2 class="nonactive"> Login </h2>
+
+                <h2 class="active"> Cadastro </h2>
                 <form action="cadastro_script.php" method="POST">
-                <div class="alt">
+                    
+
+                    <input type="text" class="text" name="nome" required>
+                    <span>nome</span>
+                    <br>
+
+                    <br>
+                    <input type="email" class="text" name="email" class="input" required>
+                    <span>Email</span>
+                    <br>
+                    
+                    <br>
+                    <input type="password" class="text" name="senha" class="input" required>
+                    <span>password</span>
+                    <br>
+                    
+                    <button type="submit "class="signin">Cadastrar</button>
+                    <hr>
+
+                </form>
+                <a href="index.php"><input type="button" value="Voltar" class="voltar"></a>
+                <footer>
+                    <div>&copy;JonesTech</div>
+                </footer>
+                </div>
+
+                    
+
+                    
+
+
+
+                                
+                                
+                
+                
+                
+                <!-- <div class="alt">
                     <input type="text" id="nome" name="nome" class="input" required>
                     <label for="nome" id="name">Nome</label>
                 </div>
@@ -30,14 +71,7 @@
                 </div>
                 <div>
                     <input type="submit" value="Enviar"  class="submit">
-                </div>
-                </form>
-                    <a href="index.php"><input type="button" value="Voltar" class="voltar"></a>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div>&copy;JonesTech</div>
-    </footer>
+                </div> -->
+        </section>
 </body>
 </html>

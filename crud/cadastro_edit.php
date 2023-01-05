@@ -41,7 +41,7 @@
                     <label for="password" id="pass">Senha</label>
                 </div>
                 <div>
-                    <input type="submit" value="Enviar"  class="submit" value="Salvar Alterações">
+                    <input type="submit" class="Sa" value="Salvar Alterações">
                     <input type="hidden" name="id" value="<?php echo $linha['id']; ?>">
                 </div>
                 </form>

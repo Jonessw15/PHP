@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/search.css"> <!-- LINK CSS -->
+    <link rel="stylesheet" href="css/style2.css"> <!-- LINK CSS -->
     <title>Pesquisa</title>
+    <style>
+      
+    </style>
   
 </head>
 <body>
@@ -55,24 +58,55 @@ include "action/conexao.php";
                           <td>$senha</td>
                           <td width='150px'>
                             <a href='cadastro_edit.php?id=$id' class='btn-edit'>Editar</a>
-                            <a href='#' class='btn-del'>Excluir</a>
+                            <button class='btn-del' onclick='pegarDados($id, `$nome`)'>Excluir</button>
                           </td>";
                 }
-
-
-			
 			?>
         </tbody>
     </table>
-
-
 </div>
 </div>
- 
 <a href="index.php"><button>Voltar</button></a>
 
+    <div class="modal-container">
+      <form action="excluir_script.php" method="post">
+      <div class="modal">
+        <h2>Confirmação de exclusão</h2>
+        <hr />
+        <p>Deseja realmente apagar <b id="nome_pessoa">Nome da pessoa</b>?</p>
+        <hr />
+        <div class="btns">
+          <input type="hidden" name="id" id="id" value="">
+          <input type="hidden" name="nome" id="nome_pessoa1" value="">
+          <input type="submit" class="btnSim" onclick="closeModal1()" value="Sim">
+          </form>
+          <button class="btnNao" onclick="closeModal()">Não</button>
+        </div>
+      </div>
+    </div>
+ 
+  <script src="js/script.js"></script>
 
 </body>
 </html>
 </body>
 </html>
+
+ <!-- function alerta(texto, chamada1, chamada2){
+      var confirmacao = confirm(texto)
+      if(confirmacao) chamada1()
+      else chamada2()
+    }
+
+
+
+    function excluir() {
+      confirm(
+        "Deseja apagar?",
+        function(){
+          confirm("Apagado!")
+        },
+        function(){
+          confirm("Não apagado")
+        }
+      )}  -->
